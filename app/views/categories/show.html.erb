@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= @category.name %></strong>
+
+
+</p>
+<div>
+  <% Category.find(params[:id]).articles.each do |article| %>
+  <article class="blog">
+    <div class="title"><a href="/articles/<%= article.id %>"><%= article.title %></a></div>
+    <div class="content"><%= article.content.truncate(120) %></div>
+    <div class="created_at">Date created: <%= article.created_at.strftime("%d %b. %Y")%></div>
+  </article>
+  <% end %>
+</div>
+<br>
+<%= link_to 'Back', categories_path %>
