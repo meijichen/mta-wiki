@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
   def logout
     session[:user_id]=nil
-    redirect_to '/login'
+    redirect_to root_path
   end
 
   # DOES AN ACTUAL LOGIN
