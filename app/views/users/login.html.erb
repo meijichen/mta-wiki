@@ -1,6 +1,18 @@
+<br>
+<h3>Please Login </h3>
 <form action="/login" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <input type="text" name="email">
-  <input type="password" name="password">
+
+  <div class = 'email_field'>
+    <lable for ='email'>email:</lable>
+    <input type="text" id='email' name="email" placeholder="abc@email.co">
+  </div>
+  <br>
+  <div class = 'password_field'>
+    <lable for='password'>password:</lable>
+    <input type="password" id='password' name="password" placeholder="password">
+  </div>
+  <br>
   <input type="submit">
+  <button><a href = "/users/new">New User</a></button>
 </form>
