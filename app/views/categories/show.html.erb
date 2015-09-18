@@ -11,7 +11,7 @@
     <div class="title"><a href="/articles/<%= article.id %>"><%= article.title %></a></div>
     <div class="content"><%= article.content.truncate(120) %></div>
     <div class="created_at">Date created: <%= article.created_at.strftime("%d %b. %Y")%></div>
-    <div class="created_by">Created by: <%= article.user.name %></div>
+    <div class="created_by">Created by: <%= link_to article.user.name, article.user %></div>
   </article>
   <% end %>
 </div>

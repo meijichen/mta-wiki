@@ -12,17 +12,22 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @article.category.name %>
+  <%= @article.category.name%>
 </p>
 
 <p>
-  <strong>Published at:</strong>
-  <%= @article.created_at.strftime("%d %b. %Y")%>
+  <strong>Published:</strong>
+  <%= @article.created_at.strftime("%d %b. %Y %H:%M:%S")%>
 </p>
 
 <p>
   <strong>Created by:</strong>
-  <%= @article.user.name%>
+  <a href="/users/<%= @article.user %>"><%= @article.user.name %></a>
+</p>
+
+<p>
+  <strong>Last Updated:</strong>
+  <%= @article.updated_at.strftime("%d %b. %Y %H:%M:%S") %>
 </p>
 
 
