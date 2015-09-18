@@ -5,16 +5,25 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
-  <div id='login-nav'>
+
+  <div class ='login_container'>
+    <div class='login_nav'>
+      <span class ='login-nav' id='home'> <%= link_to 'Career-Wiki', '/' %>
+      </span>
       <% if current_user %>
+      <span class ='login-nav'>
       You are logged in as <%= current_user.name %>
-    <% else %>
+      <% else %>
+      </span>
+      <span class ='login-nav'>
       <%=link_to 'Log In', '/login' %>
-    <% end %>
-    <%= link_to 'Log Out', '/logout' %>
-    <%= link_to 'Home', '/' %>
+      </span>
+      <% end %>
+      <span class ='login-nav'><%= link_to 'Log Out', '/logout' %></span>
+    </div>
   </div>
 
 
