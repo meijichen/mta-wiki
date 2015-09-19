@@ -18,14 +18,20 @@
 
 .login_container{
   background-color: #686868;
-  height: 8em;
+  height: 7em;
   padding-left: 40px;
+  padding-right: 40px;
+  padding-top:40px;
 }
 .container{
   padding-left: 40px;
+  padding-right: 40px;
+
 }
 .login_nav{
-  padding-top:40px;
+  float: right;
+  padding-top: 70px;
+
 }
 
 #home{
@@ -41,7 +47,10 @@ height: 100px;
 position: absolute;
 bottom: 0;
 left: 0;
-background-color: #686868;
 display:table-cell;
 vertical-align:bottom;
+}
+
+.new{
+  float: right;
 }

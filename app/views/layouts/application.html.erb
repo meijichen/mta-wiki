@@ -10,9 +10,10 @@
 <body>
 
   <div class ='login_container'>
+    <span id='home'> <%= link_to 'Career-Wiki', '/' %>
+    </span>
+
     <div class='login_nav'>
-      <span class ='login-nav' id='home'> <%= link_to 'Career-Wiki', '/' %>
-      </span>
       <% if current_user %>
       <span class ='login-nav'>
       You are logged in as <%= current_user.name %>
@@ -27,7 +28,7 @@
   </div>
 
 
-<%= yield %>
+      <%= yield %>
 
 </body>
 </html>

@@ -15,10 +15,10 @@
     <tbody>
       <% @articles.each do |article| %>
         <tr>
-          <td><%= article.title %></td>
-          <td><%= article.user%></td>
-          <td><a href="/categories/<%= article.category.id %>"><%= article.category.name %></a></td>
-          <td><%= link_to 'Show', article %></td>
+          <td><%= link_to article.title, article %></td>
+          <td><%= article.user.name%></td>
+          <td><a href="/categories/<%= article.category%>"><%= article.category.name%></a></td>
+
           <td><%= link_to 'Edit', edit_article_path(article) %></td>
           <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>

@@ -9,9 +9,9 @@
 <footer>
   <div class = 'footer'>
     <a class="new" href="/categories/new">Create a category</a>
-    <a class="new" href="/articles/new">Create a article</a>
+    <a class="new" href="/articles/new">Create an article</a>
   </div>
-  <div class='footer category_container'>
+  <div class='category_container'>
     <% Category.all.each do |category| %>
       <div style = "width:<%=100/Category.count%>%;float:left" class='category_index'> <%= link_to category.name, category %></div>
     <% end %>

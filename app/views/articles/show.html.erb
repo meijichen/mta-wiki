@@ -2,17 +2,18 @@
 
 <p>
   <strong>Title:</strong>
-  <%= @article.title %>
+  <%= markdown(@article.title)%>
 </p>
 
 <p>
   <strong>Content:</strong>
-  <%= @article.content %>
+  <%= markdown(@article.content) %>
 </p>
 
 <p>
   <strong>Category:</strong>
   <%= @article.category.name%>
+  </p>
 </p>
 
 <p>
@@ -31,5 +32,12 @@
 </p>
 
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Edit', edit_article_path(@article) %>
 <%= link_to 'Back', articles_path %>
+
+<footer>
+  <div class = 'footer'>
+    <a class="new" href="/categories/new">Create a category</a>
+    <a class="new" href="/articles/new">Create an article</a>
+  </div>
+</footer>

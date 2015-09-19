@@ -28,6 +28,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'rails_12factor'
 
+gem 'redcarpet', '~> 3.0.0'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 

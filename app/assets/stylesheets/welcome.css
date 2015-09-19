@@ -16,6 +16,7 @@
 .categorgy_contain{
   padding-left: 40px;
   padding-right: 40px;
+  padding-top: 30px
   background-color: #686868;
   position: absolute;
   bottom: 0;
@@ -25,4 +26,14 @@
   overflow:auto;
   padding-left: 40px;
   padding-right: 40px;
+}
+
+footer {
+width: 100%;
+height: 100px;
+position: absolute;
+bottom: 0;
+left: 0;
+display: table-cell;
+vertical-align:bottom;
 }
