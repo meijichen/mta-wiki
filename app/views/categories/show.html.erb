@@ -5,16 +5,23 @@
 
 
 </p>
-<div>
+<div class='article'>
   <% Category.find(params[:id]).articles.each do |article| %>
-  <article class="blog">
+  <article class="content">
     <div class="title"><a href="/articles/<%= article.id %>"><%= article.title %></a></div>
-    <div class="content"><%= article.content.truncate(120) %></div>
-    <div class="created_at">Date created: <%= article.created_at.strftime("%d %b. %Y")%></div>
-    <div class="created_by">Created by: <%= link_to article.user.name, article.user %></div>
+    <div class="blurb"><%= article.content.truncate(120) %></div>
+    <div class="publish">created: <%= article.created_at.strftime("%d %b. %Y")%></div>
+    <div class="bublish">by: <%= link_to article.user.name, article.user %></div>
   </article>
   <% end %>
 </div>
 <br>
 <%= link_to 'Edit', edit_category_path(@category) %>
 <%= link_to 'Back', categories_path %>
+
+<footer>
+  <div class = 'footer'>
+    <a class="new" href="/categories/new">Create a category</a>
+    <a class="new" href="/articles/new">Create an article</a>
+  </div>
+</footer>

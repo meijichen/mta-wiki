@@ -1,32 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-  <h1>Listing Articles</h1>
+  <div class ='container'>
+    <div class ='new'> <%= link_to 'Add Article', new_article_path %></div>
+    <h2>Articles</h2>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>User</th>
-        <th>Category</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
 
-    <tbody>
+    <div class='clearfix'>
       <% @articles.each do |article| %>
-        <tr>
-          <td><%= link_to article.title, article %></td>
-          <td><%= article.user.name%></td>
-          <td><a href="/categories/<%= article.category%>"><%= article.category.name%></a></td>
-
-          <td><%= link_to 'Edit', edit_article_path(article) %></td>
-          <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
+      <div class='article'>
+        <ul class='content'>
+          <li class='title'><%= link_to article.title, article %></li>
+          <article class="blurb"><%= article.content.truncate(200) %></article>
+          <li class='publish'>by: <span class= 'author'><%= link_to article.user.name, article%></span></li>
+          <li  class='publish'>category: <a class='publish' href="/categories/<%= article.category%>"><%= article.category.name%></a></li>
+          <%= link_to 'Edit', edit_article_path(article) %>
+          <!-- <%#= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+        </ul>
+      </div>
+        <% end %>
+    </div>
   <br>
-
-
-<%= link_to 'New Article', new_article_path %>
+</div>

@@ -1,19 +1,20 @@
 <div class="container">
-  <h1 > Welcome to Career-Wiki </h1>
+  <div class='category_container'>
+    <% Category.all.each do |category| %>
+      <div style = "width:<%=100/Category.count%>%;float:left" class='category_index'> <%= link_to category.name, category %></div>
+    <% end %>
+  </div>
+
+<p class='about'>
+  <span class='red'>.</span>provide career seekers a source for advise and information. everyone needs a career that they enjoy. let us help you find it.
+</p>
+
 </div>
-
-
-
-
 
 <footer>
   <div class = 'footer'>
     <a class="new" href="/categories/new">Create a category</a>
     <a class="new" href="/articles/new">Create an article</a>
-  </div>
-  <div class='category_container'>
-    <% Category.all.each do |category| %>
-      <div style = "width:<%=100/Category.count%>%;float:left" class='category_index'> <%= link_to category.name, category %></div>
-    <% end %>
+    <a class="new" href="/articles">All articles</a>
   </div>
 </footer>

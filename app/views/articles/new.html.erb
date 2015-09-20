@@ -1,12 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <div class = 'container'>
-<h1>New Article</h1>
-<p>You can use Markdown to create a new article.</p>
+  <h2>New Article</h2>
+  <p>
+    <article>You can use Markdown to create a new article.
+    <span class='link'><a href ="https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet">'Markdown Cheatsheet'</a></span></article>
+  </p>
 
-<%= render 'form' %>
-<br>
+  <%= render 'form' %>
+
+  <br>
+
+
+  <%= link_to 'Back', articles_path %>
 </div>
-
-<%= link_to 'Back', articles_path %>
-<a href ="https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet">Link_to 'Markdown Cheatsheet'</a>
