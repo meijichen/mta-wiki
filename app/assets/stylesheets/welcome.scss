@@ -1,6 +1,5 @@
 .new {
   padding:5px;
-  background-color: #dcdcdc;
   border: 1px solid #666;
   color:#000;
   text-decoration:none;
@@ -8,8 +7,10 @@
   float:right;
   width: 120px;
   text-align: center;
-
+  border-radius: 4px;
+  background-color: white;
 }
+
 
 .category_index{
   border-left: 1px solid #111111;
@@ -18,16 +19,9 @@
   text-transform: uppercase;
   padding-top: 20px;
   font-weight: bold;
+  float:left;
 }
-.categorgy_contain{
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 20px;
-  background-color: #686868;
-  position: absolute;
-  bottom: 0;
-  overflow:auto;
-}
+
 .footer{
   padding-left: 40px;
   padding-right: 40px;

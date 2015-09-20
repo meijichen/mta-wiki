@@ -1,6 +1,5 @@
-<p id="notice"><%= notice %></p>
-
   <div class ='container'>
+    <p id="notice"><%= notice %></p>
     <div class ='new'> <%= link_to 'Add Article', new_article_path %></div>
     <h2>Articles</h2>
 
@@ -11,7 +10,7 @@
         <ul class='content'>
           <li class='title'><%= link_to article.title, article %></li>
           <article class="blurb"><%= article.content.truncate(200) %></article>
-          <li class='publish'>by: <span class= 'author'><%= link_to article.user.name, article%></span></li>
+          <li class='publish'>by: <span class= 'author'><%= link_to article.user.name, article.user%></span></li>
           <li  class='publish'>category: <a class='publish' href="/categories/<%= article.category%>"><%= article.category.name%></a></li>
           <%= link_to 'Edit', edit_article_path(article) %>
           <!-- <%#= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %> -->

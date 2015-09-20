@@ -44,7 +44,6 @@ footer {
 width: 100%;
 height: 60px;
 bottom: 0;
-display:table-cell;
 vertical-align:bottom;
 clear: left;
 }
@@ -58,7 +57,8 @@ textarea{
 .content{
   list-style: none;
   padding: 0;
-  margin: 10px;
+  margin: 2em;
+  padding-top: 20px;
 }
 .article{
   border: #111111 dotted 1px;
@@ -91,4 +91,27 @@ textarea{
 h2{
   text-align: center;
   margin: 30px;
+}
+.name{
+  font-family: 'Oswald','Open Sans', sans-serif;
+  font-weight: 400;
+  color:#f20604;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.edit{
+  text-transform: lowercase;
+  color:#686868;
+}
+.category{
+  border-left: 1px solid #111111;
+  text-align: left;
+  padding-top: 30px;
+  width: 33%;
+  margin: 0;
+  float: left;
+}
+
+.category_content{
+  padding: 50px;
 }

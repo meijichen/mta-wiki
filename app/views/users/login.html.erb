@@ -1,18 +1,20 @@
-<br>
-<h3>Please login to modify or add an article.</h3>
-<form action="/login" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+<div class='container'>
+  <br>
+  <h3>Please login</h3>
+  <form action="/login" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-  <div class = 'email_field'>
-    <lable for ='email'>email:</lable>
-    <input type="text" id='email' name="email" placeholder="abc@email.co">
-  </div>
-  <br>
-  <div class = 'password_field'>
-    <lable for='password'>password:</lable>
-    <input type="password" id='password' name="password" placeholder="password">
-  </div>
-  <br>
-  <input type="submit">
-  <button><a href = "/users/new">New User</a></button>
-</form>
+    <div class = 'email_field'>
+      <lable for ='email'>email:</lable>
+      <input type="text" id='email' name="email" placeholder="abc@email.co">
+    </div>
+    <br>
+    <div class = 'password_field'>
+      <lable for='password'>password:</lable>
+      <input type="password" id='password' name="password" placeholder="password">
+    </div>
+    <br>
+    <input type="submit">
+    <a href = "/users/new" class='new'>New User</a>
+  </form>
+</div>

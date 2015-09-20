@@ -1,27 +1,29 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong><%= @category.name %></strong>
-
-
-</p>
-<div class='article'>
+<div class='container'>
+  <p class='category_index'>
+    <%= @category.name %></a>
+  </p>
+</div>
+<div class ='container'>
+  <p id="notice"><%= notice %></p>
+  <div class = 'category_content'>
   <% Category.find(params[:id]).articles.each do |article| %>
-  <article class="content">
+  <article class="article">
     <div class="title"><a href="/articles/<%= article.id %>"><%= article.title %></a></div>
     <div class="blurb"><%= article.content.truncate(120) %></div>
     <div class="publish">created: <%= article.created_at.strftime("%d %b. %Y")%></div>
-    <div class="bublish">by: <%= link_to article.user.name, article.user %></div>
+    <div class="publish">by: <%= link_to article.user.name, article.user %></div>
   </article>
   <% end %>
-</div>
-<br>
-<%= link_to 'Edit', edit_category_path(@category) %>
-<%= link_to 'Back', categories_path %>
+  </div>
+  <br>
 
+</div>
 <footer>
+  <p style = 'padding-left: 50px'><%= link_to 'Edit', edit_category_path(@category) %>
+  <%= link_to 'Back', categories_path %></p>
   <div class = 'footer'>
     <a class="new" href="/categories/new">Create a category</a>
     <a class="new" href="/articles/new">Create an article</a>
+    <a class="new" href="/articles">All articles</a>
   </div>
 </footer>
