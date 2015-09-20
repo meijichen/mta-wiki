@@ -20,7 +20,7 @@ pre {
 }
 
 a {
-  color:#333333;
+  color: inherit;
   text-decoration: none;
 
   &:visited {
@@ -41,6 +41,7 @@ div {
 
 #notice {
   color: green;
+  float: right;
 }
 
 .field_with_errors {
